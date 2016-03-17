@@ -21,13 +21,17 @@ section{
     display: table-cell;
     vertical-align: middle;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
 }
 section h1{
     margin-bottom: 30px;
     font-size: 65px;
     font-weight: bold;
     line-height: 1;
+}
+
+h1#countdown {
+    font-size: 30px;
 }
 section p{
     font-size: 14px;
