@@ -37,6 +37,30 @@ section p{
     font-size: 14px;
     line-height: 1.78
 }
+
+section li {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    height: 30px;
+    margin: 3px;
+    padding: 0 10px;
+    line-height: 30px;
+    background: #fff;
+}
+
+section li a {
+    color: #34ae81;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.more {
+    padding-top: 20px;
+    font-size: 12px;
+    color: #bbb;
+}
+
 footer{
     position: absolute;
     bottom: 0;
