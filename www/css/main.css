@@ -33,9 +33,19 @@ section h1{
 h1#countdown {
     font-size: 30px;
 }
-section p{
+
+h1#myname {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+section p {
     font-size: 14px;
     line-height: 1.78
+}
+
+section ul {
+    margin-top: 20px;
 }
 
 section li {
