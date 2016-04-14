@@ -18,12 +18,25 @@ body{
     height: 100%;*/
     width: 100%;
 }
+#item {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+}
 section{
     /*display: table-cell;
     vertical-align: middle;*/
     margin: 0;
     padding: 40px 20px 20px 20px;
 }
+
+#wrapper {
+
+}
+
 section h1{
     margin-bottom: 30px;
     font-size: 65px;
