@@ -40,7 +40,18 @@
             var TwoYear = DateTwo.substring(0,DateTwo.indexOf ('-'));
           
             var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear)- Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear))/86400000);
-            return Math.abs(cha);
+            
+            var txt = ''
+
+            if (cha < 0) {
+                txt = '已经'
+            } else {
+                txt = '还有'
+            }
+
+            var days =  Math.abs(cha);
+
+            returen txt + ' ' + days + ' 天'
         }
 
         var myT = new Date(),
