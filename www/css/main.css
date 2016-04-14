@@ -1,8 +1,8 @@
 html{
-    height: 100%;
+    /*height: 100%;*/
 }
 body{
-    height: 100%;
+    /*height: 100%;*/
     padding: 0;
     margin: 0;
     background: #F5F5F5;
@@ -13,15 +13,15 @@ body{
     text-align: center;
 }
 #wrapper{
-    display: table;
-    height: 100%;
+    /*display: table;
+    height: 100%;*/
     width: 100%;
 }
 section{
-    display: table-cell;
-    vertical-align: middle;
+    /*display: table-cell;
+    vertical-align: middle;*/
     margin: 0;
-    padding: 0 20px;
+    padding: 40px 20px 20px 20px;
 }
 section h1{
     margin-bottom: 30px;
