@@ -23,8 +23,8 @@
     <body>
         <div id="wrapper" class="item">
             <section>
-                <h1 id="countdown">距离关闭还有 <span></span> 天</h1>
-                <a href="http://yun.uc.cn/">yun.uc.cn</a> 网盘存储服务将于 2016 年 4 月 15 日停止，请广大用户提前备份文件。
+                <h1 id="countdown">距离关闭<span></span>天</h1>
+                公告：<a href="http://yun.uc.cn/">yun.uc.cn</a> 网盘存储服务将于 2016 年 4 月 15 日停止，请广大用户提前备份文件。
             </section>
         </div>
 
@@ -39,19 +39,21 @@
             var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ('-')+1);
             var TwoYear = DateTwo.substring(0,DateTwo.indexOf ('-'));
           
-            var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear)- Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear))/86400000);
+            var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear) - Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear)) / 86400000);
             
             var txt = ''
 
-            if (cha < 0) {
+            if (cha > 0) {
                 txt = '已经'
             } else {
                 txt = '还有'
             }
 
+            console.log('cha', cha)
+
             var days =  Math.abs(cha);
 
-            returen txt + ' ' + days + ' 天'
+            return txt + ' ' + days + ' '
         }
 
         var myT = new Date(),
