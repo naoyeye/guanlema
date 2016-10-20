@@ -9,7 +9,7 @@ body{
     
     font-size: 12px;
     color: #666;
-    /*font-family: system, -apple-system, ".SFNSDisplay-Regular", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.45;
     text-align: center;
 }
