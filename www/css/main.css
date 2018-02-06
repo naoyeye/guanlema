@@ -79,13 +79,22 @@ section li a {
     font-size: 14px;
 }
 
+
+section li.closed {
+    background: #888;
+}
+
+section li.closed a {
+    color: #ccc;
+}
+
 .more {
     padding-top: 20px;
     font-size: 12px;
     color: #bbb;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
     left: 0;
