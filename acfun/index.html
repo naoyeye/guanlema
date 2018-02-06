@@ -23,9 +23,55 @@
     <body>
         <div id="wrapper" class="item">
             <section>
-                <h1>关了</h1>
+                <h1 id="countdown">距离关闭<span></span>天</h1>
                 <a target="_blank" href="http://tech.qq.com/a/20180202/012823.htm">2018年2月2日10点半开始，A站网站显示无法访问。</a>
             </section>
         </div>
+        <script src="http://cdnjs.gtimg.com/cdnjs/libs/zepto/1.1.4/zepto.min.js"></script>
+        <script>
+        function daysBetween(DateOne,DateTwo){
+            var OneMonth = DateOne.substring(5,DateOne.lastIndexOf ('-'));
+            var OneDay = DateOne.substring(DateOne.length,DateOne.lastIndexOf ('-')+1);
+            var OneYear = DateOne.substring(0,DateOne.indexOf ('-'));
+
+            var TwoMonth = DateTwo.substring(5,DateTwo.lastIndexOf ('-'));
+            var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ('-')+1);
+            var TwoYear = DateTwo.substring(0,DateTwo.indexOf ('-'));
+          
+            var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear) - Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear)) / 86400000);
+            
+            var txt = ''
+
+            if (cha > 0) {
+                txt = '已经'
+            } else {
+                txt = '还有'
+            }
+
+            console.log('cha', cha)
+
+            var days =  Math.abs(cha);
+
+            return txt + ' ' + days + ' '
+        }
+
+        var myT = new Date(),
+            myYear = myT.getFullYear(),
+            myMonth = myT.getMonth() + 1,
+            myDate = myT.getDate();
+
+        if(myMonth < 10){
+            myMonth = '0' + myMonth
+        }
+
+        if(myDate < 10){
+            myDate = '0' + myDate
+        }
+
+        var nowTime = myYear + '-' + myMonth + '-' + myDate;
+        var endTime = '2018-02-02';
+        var days = daysBetween(nowTime, endTime);
+        $('#countdown span').html(days);
+        </script>
     </body>
 </html>
